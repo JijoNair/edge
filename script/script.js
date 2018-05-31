@@ -9,14 +9,10 @@ console.log(filenm);
  }
 
 
-  $('.ui.accordion')
-
-    .accordion()
-  ;
+  $('.ui.accordion').accordion();
   $('.tag.example .ui.dropdown').dropdown({allowAdditions: true});
 
   $('#search').click(function(){
-<<<<<<< HEAD
     //$( "#acc" ).toggle( display );
     $('#acc').transition('scale');
 
@@ -35,15 +31,6 @@ $('#clear').click(function(){
 $('.info.circle.link.icon').click(function(){
   $('#showinfo').modal('show');
 });
-=======
-    //$('.ui.modal').modal('show');
-    $('.coupled.modal').modal({allowMultiple: false});
- // open second modal on first modal buttons
- $('.second.modal').modal('attach events', '.first.modal .icon');
- // show first immediately
-  $('.first.modal').modal('show');
-  });
->>>>>>> origin/master
 
   $('.menu .item').tab();
 
