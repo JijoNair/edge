@@ -6,7 +6,7 @@ $( document ).ready(function() {
 
   $('#search').click(function(){
     //$('.ui.modal').modal('show');
-    $('.coupled.modal').modal({allowMultiple: true});
+    $('.coupled.modal').modal({allowMultiple: false});
  // open second modal on first modal buttons
  $('.second.modal').modal('attach events', '.first.modal .icon');
  // show first immediately
