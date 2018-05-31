@@ -7,6 +7,7 @@
 <script src="script/script.js" type="text/javascript"></script>
 </head>
 <body>
+<<<<<<< HEAD
 <div class="loader">
   <div class="loader__bar"></div>
   <div class="loader__bar"></div>
@@ -17,5 +18,245 @@
   <div style="margin-top:200%;margin-left:-85%"> <font face="" size="12" color="white">LINEDATA</font></div>
 </div>
 
+=======
+  <!-- home segment -->
+
+  <div class="ui left aligned container" style="margin-top:15em">
+    <div class="ui red segment">
+<div class="ui form">
+  <div class="inline fields">
+    <label>Search For</label>
+    <div class="field">
+      <select class="ui search dropdown">
+          <option value="">Field</option>
+          <option value="1">Symbol</option>
+          <option value="0">CUSIP</option>
+          <option value="0">ISIN</option>
+          <option value="0">Reuters</option>
+        </select>
+    </div>
+    <div class="field">
+      <input type="text" placeholder="e.g: IBM">
+    </div>
+    <div class="field">
+      <button class="ui labeled link icon button" id="search">
+        <i class="search icon"></i>
+          Search
+      </button>
+    </div>
+    <div class="field">
+      <button class="ui labeled icon button">
+        <i class="delete icon"></i>
+          Clear
+      </button>
+    </div>
+  </div>
+</div>
+
+<div style="">
+<div class="ui styled accordion" style=>
+  <div class="title">
+    <i class="dropdown icon"></i>
+  Equity
+  </div>
+  <div class="content">
+    <p class="transition hidden"><table id="example" class="mdl-data-table" style="width:100%">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th>Age</th>
+            <th>Start date</th>
+            <th>Salary</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Tiger Nixon</td>
+            <td>System Architect</td>
+            <td>Edinburgh</td>
+            <td>61</td>
+            <td>2011/04/25</td>
+            <td>$320,800</td>
+            <td><i class="file icon"></i>| <i class="copy icon"></i> | <i class="pencil icon"></i> | <i class="info circle link icon" data-content="show info" data-inverted="" id="info"></i></td>
+        </tr>
+        <tr>
+            <td>Garrett Winters</td>
+            <td>Accountant</td>
+            <td>Tokyo</td>
+            <td>63</td>
+            <td>2011/07/25</td>
+            <td>$170,750</td>
+            <td><i class="file link icon"></i>| <i class="copy link icon"></i> | <i class="pencil link icon"></i> | <i class="info circle link icon" data-content="show info" data-inverted=""></i></td>
+        </tr>
+        <tr>
+            <td>Ashton Cox</td>
+            <td>Junior Technical Author</td>
+            <td>San Francisco</td>
+            <td>66</td>
+            <td>2009/01/12</td>
+            <td>$86,000</td>
+            <td><i class="file link icon"></i>| <i class="copy link icon"></i> | <i class="pencil link icon"></i> | <i class="info circle link icon" data-content="show info" data-inverted=""></i></td>
+        </tr>
+        <tr>
+            <td>Cedric Kelly</td>
+            <td>Senior Javascript Developer</td>
+            <td>Edinburgh</td>
+            <td>22</td>
+            <td>2012/03/29</td>
+            <td>$433,060</td>
+            <td><i class="file link icon"></i>| <i class="copy link icon"></i> | <i class="pencil link icon"></i> | <i class="info circle link icon" data-content="show info" data-inverted=""></i></td>
+        </tr>
+        <tr>
+            <td>Airi Satou</td>
+            <td>Accountant</td>
+            <td>Tokyo</td>
+            <td>33</td>
+            <td>2008/11/28</td>
+            <td>$162,700</td>
+            <td><i class="file link icon"></i>| <i class="copy link icon"></i> | <i class="pencil link icon"></i> | <i class="info circle link icon" data-content="show info" data-inverted=""></i></td>
+        </tr>
+        <tr>
+            <td>Brielle Williamson</td>
+            <td>Integration Specialist</td>
+            <td>New York</td>
+            <td>61</td>
+            <td>2012/12/02</td>
+            <td>$372,000</td>
+            <td><i class="file link icon"></i>| <i class="copy link icon"></i> | <i class="pencil link icon"></i> | <i class="info circle link icon" data-content="show info" data-inverted=""></i></td>
+        </tr>
+        <tr>
+            <td>Herrod Chandler</td>
+            <td>Sales Assistant</td>
+            <td>San Francisco</td>
+            <td>59</td>
+            <td>2012/08/06</td>
+            <td>$137,500</td>
+            <td><i class="file link icon"></i>| <i class="copy link icon"></i> | <i class="pencil link icon"></i> | <i class="info circle link icon" data-content="show info" data-inverted=""></i></td>
+        </tr>
+        <tr>
+            <td>Rhona Davidson</td>
+            <td>Integration Specialist</td>
+            <td>Tokyo</td>
+            <td>55</td>
+            <td>2010/10/14</td>
+            <td>$327,900</td>
+            <td><i class="file link icon"></i>| <i class="copy link icon"></i> | <i class="pencil link icon"></i> | <i class="info circle link icon" data-content="show info" data-inverted=""></i></td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th>Age</th>
+            <th>Start date</th>
+            <th>Salary</th>
+            <th>Action</th>
+        </tr>
+    </tfoot>
+    </table></p>
+  </div>
+  <div class="title">
+    <i class="dropdown icon"></i>
+    Equity Options
+  </div>
+  <div class="content">
+    <p>There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.</p>
+  </div>
+  <div class="title">
+    <i class="dropdown icon"></i>
+    How do you acquire a dog?
+  </div>
+  <div class="content">
+    <p>Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.</p>
+    <p>A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.</p>
+  </div>
+</div>
+</div>
+  </div>
+
+
+
+</div>
+<!-- home segment-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<div class="ui first coupled modal transition">
+  <i class="close icon"></i>
+  <div class="header">
+    Search Result
+  </div>
+  <div class="content">
+    <div class="description"> -->
+      <!-- result -->
+      <!-- <div class="ui top attached tabular menu">
+          <a class="active item" data-tab="first">Equity</a>
+          <a class="item" data-tab="second">Equity Option</a>
+          <a class="item" data-tab="third">CUSIP</a>
+          <a class="item" data-tab="forth">ISIN</a>
+      </div>
+      <div class="ui bottom attached active tab segment" data-tab="first"> -->
+        <!-- euity-table-->
+
+    <!--equity-table -->
+      <!-- </div>
+      <div class="ui bottom attached tab segment" data-tab="second">
+        Equity Option
+      </div>
+      <div class="ui bottom attached tab segment" data-tab="third">
+        Cusip
+      </div>
+      <div class="ui bottom attached tab segment" data-tab="forth">
+        Cusip Option
+      </div>
+       result -->
+    <!-- </div>
+  </div>
+  <div class="actions">
+    <div class="ui black deny button">
+      Close
+    </div>
+  </div>
+</div> -->
+  <!-- <div class="ui small second coupled modal">
+    <div class="header">
+        Equity Information
+    </div>
+    <div class="content">
+      <div class="description">
+
+      </div>
+    </div>
+    <div class="actions">
+      <div class="ui approve button">
+        <i class="checkmark icon"></i>
+        Close Information
+      </div>
+    </div>
+  </div> -->
+>>>>>>> origin/master
 </body>
 </html>
