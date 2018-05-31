@@ -15,13 +15,21 @@
   <!-- home segment -->
 
   <div class="ui left aligned container" style="margin-top:15em">
+    <div class="ui secondary pointing menu">
+    <a class="item active">
+      Security Look up
+    </a>
+    <a class="item">
+      User Labels
+    </a>
+  </div>
     <div class="ui red segment">
 <div class="ui form">
   <div class="inline fields">
     <label>Search For</label>
     <div class="field">
       <select class="ui search dropdown">
-          <option value="">Field</option>
+          <option value="">Any Field</option>
           <option value="1">Symbol</option>
           <option value="0">CUSIP</option>
           <option value="0">ISIN</option>
@@ -29,7 +37,7 @@
         </select>
     </div>
     <div class="field">
-      <input type="text" id="txt" placeholder="e.g: IBM">
+      <input type="text" id="txt" placeholder="e.g: IBM*">
     </div>
     <div class="field">
       <button class="ui labeled link blue icon button" id="search">
@@ -47,129 +55,92 @@
 </div>
 
 <div style="display:none;" id="acc">
+  <div class="ui segment" id="gettdata">
+  <div class="ui active inverted dimmer" id="loader">
+    <div class="ui text loader">Getting Data</div>
+  </div>
+
 <div class="ui styled accordion" style="width:100%">
   <div class="title">
     <i class="dropdown icon"></i>
   Equity
   </div>
   <div class="content">
-    <p class="transition hidden"><table id="example" class="mdl-data-table" style="width:100%">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Position</th>
-            <th>Office</th>
-            <th>Age</th>
-            <th>Start date</th>
-            <th>Salary</th>
+    <p class="transition hidden">
+		<table id="exampletb1" class="mdl-data-table" style="width:100%">
+			<thead>
+				<tr>
+					<th>Symbol</th>
+					<th>Security Name</th>
+					<th>CUSIP</th>
+					<th>ISIN</th>
+					<th>SEDOL</th>
             <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>Edinburgh</td>
-            <td>61</td>
-            <td>2011/04/25</td>
-            <td>$320,800</td>
-            <td><i class="file icon"></i>| <i class="copy icon"></i> | <i class="pencil icon"></i> | <i class="info circle link icon" data-content="show info" data-inverted="" id="info"></i></td>
-        </tr>
-        <tr>
-            <td>Garrett Winters</td>
-            <td>Accountant</td>
-            <td>Tokyo</td>
-            <td>63</td>
-            <td>2011/07/25</td>
-            <td>$170,750</td>
-            <td><i class="file link icon"></i>| <i class="copy link icon"></i> | <i class="pencil link icon"></i> | <i class="info circle link icon" data-content="show info" data-inverted=""></i></td>
-        </tr>
-        <tr>
-            <td>Ashton Cox</td>
-            <td>Junior Technical Author</td>
-            <td>San Francisco</td>
-            <td>66</td>
-            <td>2009/01/12</td>
-            <td>$86,000</td>
-            <td><i class="file link icon"></i>| <i class="copy link icon"></i> | <i class="pencil link icon"></i> | <i class="info circle link icon" data-content="show info" data-inverted=""></i></td>
-        </tr>
-        <tr>
-            <td>Cedric Kelly</td>
-            <td>Senior Javascript Developer</td>
-            <td>Edinburgh</td>
-            <td>22</td>
-            <td>2012/03/29</td>
-            <td>$433,060</td>
-            <td><i class="file link icon"></i>| <i class="copy link icon"></i> | <i class="pencil link icon"></i> | <i class="info circle link icon" data-content="show info" data-inverted=""></i></td>
-        </tr>
-        <tr>
-            <td>Airi Satou</td>
-            <td>Accountant</td>
-            <td>Tokyo</td>
-            <td>33</td>
-            <td>2008/11/28</td>
-            <td>$162,700</td>
-            <td><i class="file link icon"></i>| <i class="copy link icon"></i> | <i class="pencil link icon"></i> | <i class="info circle link icon" data-content="show info" data-inverted=""></i></td>
-        </tr>
-        <tr>
-            <td>Brielle Williamson</td>
-            <td>Integration Specialist</td>
-            <td>New York</td>
-            <td>61</td>
-            <td>2012/12/02</td>
-            <td>$372,000</td>
-            <td><i class="file link icon"></i>| <i class="copy link icon"></i> | <i class="pencil link icon"></i> | <i class="info circle link icon" data-content="show info" data-inverted=""></i></td>
-        </tr>
-        <tr>
-            <td>Herrod Chandler</td>
-            <td>Sales Assistant</td>
-            <td>San Francisco</td>
-            <td>59</td>
-            <td>2012/08/06</td>
-            <td>$137,500</td>
-            <td><i class="file link icon"></i>| <i class="copy link icon"></i> | <i class="pencil link icon"></i> | <i class="info circle link icon" data-content="show info" data-inverted=""></i></td>
-        </tr>
-        <tr>
-            <td>Rhona Davidson</td>
-            <td>Integration Specialist</td>
-            <td>Tokyo</td>
-            <td>55</td>
-            <td>2010/10/14</td>
-            <td>$327,900</td>
-            <td><i class="file link icon"></i>| <i class="copy link icon"></i> | <i class="pencil link icon"></i> | <i class="info circle link icon" data-content="show info" data-inverted=""></i></td>
-        </tr>
-    </tbody>
-    <tfoot>
-        <tr>
-            <th>Name</th>
-            <th>Position</th>
-            <th>Office</th>
-            <th>Age</th>
-            <th>Start date</th>
-            <th>Salary</th>
-            <th>Action</th>
-        </tr>
-    </tfoot>
-    </table></p>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>IBM</td>
+					<td>INTL BUSINESS MACHINES CORP</td>
+					<td>459200101</td>
+					<td>US4592001014</td>
+					<td>2005973</td>
+					<td><i class="info circle link icon"  data-content="View Details" data-variation="inverted" id="info"></i> |  <i class="pencil link icon" data-content="Edit Security" data-variation="inverted"></i> | <i class="file link icon" data-content="View Positions" data-variation="inverted"></i>| <i class="copy link icon" data-content="View Details" data-variation="inverted"></i> </td>
+				</tr>
+			</tbody>
+		</table>
+	</p>
   </div>
   <div class="title">
     <i class="dropdown icon"></i>
     Equity Options
   </div>
   <div class="content">
-    <p>There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.</p>
-  </div>
-  <div class="title">
-    <i class="dropdown icon"></i>
-    How do you acquire a dog?
-  </div>
-  <div class="content">
-    <p>Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.</p>
-    <p>A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.</p>
-  </div>
+    <p class="transition hidden">
+		<table id="exampletb2" class="mdl-data-table" style="width:100%">
+			<thead>
+				<tr>
+					<th>Symbol</th>
+					<th>Security Name</th>
+					<th>Option Type</th>
+					<th>Strike Price</th>
+					<th>Expiration Date</th>
+          <th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>IBM 180525P125</td>
+					<td>IBM May 2018</td>
+					<td>PUT</td>
+					<td>125</td>
+					<td>05/25/2018</td>
+					<td><i class="info circle link icon"  data-content="View Details" data-variation="inverted" id="info"></i> |  <i class="pencil link icon" data-content="Edit Security" data-variation="inverted"></i> | <i class="file link icon" data-content="View Positions" data-variation="inverted"></i>| <i class="copy link icon" data-content="View Details" data-variation="inverted"></i> </td>
+				</tr>
+				<tr>
+					<td>IBM 180525P130</td>
+					<td>IBM May 2018</td>
+					<td>PUT</td>
+					<td>130</td>
+					<td>05/25/2018</td>
+					<td><i class="info circle link icon"  data-content="View Details" data-variation="inverted" id="info"></i> |  <i class="pencil link icon" data-content="Edit Security" data-variation="inverted"></i> | <i class="file link icon" data-content="View Positions" data-variation="inverted"></i>| <i class="copy link icon" data-content="View Details" data-variation="inverted"></i> </td>
+				</tr>
+				<tr>
+					<td>IBM 180525C130</td>
+					<td>IBM May 2018</td>
+					<td>CALL</td>
+					<td>130</td>
+					<td>05/25/2018</td>
+					<td><i class="info circle link icon"  data-content="View Details" data-variation="inverted" id="info"></i> |  <i class="pencil link icon" data-content="Edit Security" data-variation="inverted"></i> | <i class="file link icon" data-content="View Positions" data-variation="inverted"></i>| <i class="copy link icon" data-content="View Details" data-variation="inverted"></i> </td>
+				</tr>
+			</tbody>
+		</table>
+	</p>
+   </div>
 </div>
 </div>
-  </div>
+</div>
+</div>
 
 
 
@@ -178,63 +149,73 @@
 
 
 
-  <div class="ui small second coupled modal" id="showinfo">
+  <div class="ui modal" id="showinfo">
+     <i class="close icon"></i>
     <div class="header">
-        Equity Information
+        Security Details
     </div>
-    <div class="content">
+    <div class="content" width="auto">
       <div class="description">
         <table class="ui celled padded table">
-  <thead>
-    <tr><th class="single line">Security Information</th>
-    <th>Security Identifiers</th>
-    <th>Equity Information</th>
-    <th>Analytics</th>
-    <th>Comments</th>
-  </tr></thead>
-  <tbody>
-    <tr>
-      <td>
-        <h2 class="ui center aligned header">A</h2>
-      </td>
-      <td class="single line">
-        Power Output
-      </td>
-      <td>
-        <div class="ui star rating" data-rating="3" data-max-rating="3"></div>
-      </td>
-      <td class="right aligned">
-        80% <br>
-        <a href="#">18 studies</a>
-      </td>
-      <td>Creatine supplementation is the reference compound for increasing muscular creatine levels; there is variability in this increase, however, with some nonresponders.</td>
-    </tr>
-    <tr>
-      <td>
-        <h2 class="ui center aligned header">A</h2>
-      </td>
-      <td class="single line">
-        Weight
-      </td>
-      <td>
-        <div class="ui star rating" data-rating="3" data-max-rating="3"></div>
-      </td>
-      <td class="right aligned">
-        100% <br>
-        <a href="#">65 studies</a>
-      </td>
-      <td>Creatine is the reference compound for power improvement, with numbers from one meta-analysis to assess potency</td>
-    </tr>
-  </tbody>
-</table>
-      </div>
-    </div>
-    <div class="actions">
-      <div class="ui approve button">
-        <i class="checkmark icon"></i>
-        Close Information
+		  <thead>
+			<tr>
+				<th>Security Information</th>
+				<th>Security Identifiers</th>
+				<th>Equity Information & Analytics</th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<tr>
+			  <td>
+  				<table border="0">
+  					<tr><td>Name</td><td>INTL BUSINESS MACHINES CORP</td><tr>
+  					<tr><td>Security Type</td><td>Equity Stock</td></tr>
+  					<tr><td>Issuer</td><td>IBM</td></tr>
+  					<tr><td>Country</td><td>United States</td></tr>
+            <tr><td>Exchange</td><td>NYSE</td></tr>
+            <tr><td>Create Date</td><td>07/15/2016 6:35:30 AM</td></tr>
+  				</table>
+			  </td>
+			  <td>
+          <table border="0">
+  					<tr><td>Ticker</td><td>IBM</td><tr>
+  					<tr><td>CUSIP</td><td>459200101</td></tr>
+  					<tr><td>ISIN</td><td>US4592001014</td></tr>
+  					<tr><td>SEDOL</td><td>2005973</td></tr>
+            <tr><td>Reuters ID</td><td>xxxx</td></tr>
+  				</table>
+			  </td>
+			  <td>
+          <table border="0">
+            <tr><td>Last Dividend Pay Date</td><td>5/9/2018</td><tr>
+            <tr><td>Last Dividend Amount</td><td>$1.57</td></tr>
+            <tr><td>Next Dividend Date</td><td>8/9/2018</td></tr>
+            <tr><td>Next Dividend Amount</td><td>$1.57</td></tr>
+            <tr><td>Shares Outstanding</td><td>917,968,000</td></tr>
+            <tr><td>P/E Ratio</td><td>23.5</td></tr>
+          </table>
+			  </td>
+			</tr>
+		  </tbody>
+		</table>
       </div>
     </div>
   </div>
+
+  <div class="ui basic modal" id="comingsoon">
+  <div class="ui icon header">
+    <i class="archive icon"></i>
+    New Information will be uploaded soon
+  </div>
+  <div class="content">
+    <p></p>
+  </div>
+  <div class="actions">
+    <div class="ui green ok inverted button">
+      <i class="checkmark icon"></i>
+      OK
+    </div>
+  </div>
+</div>
 </body>
 </html>
